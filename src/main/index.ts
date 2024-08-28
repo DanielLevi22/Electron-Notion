@@ -9,6 +9,13 @@ function createWindow(): void {
     height: 670,
     show: false,
     autoHideMenuBar: true,
+    trafficLightPosition: {
+      x: 20,
+      y: 20,
+    },
+
+    titleBarStyle: 'hiddenInset',
+    backgroundColor: '#17141f',
     icon:
       process.platform === 'linux'
         ? path.resolve(__dirname, 'icon.png')
