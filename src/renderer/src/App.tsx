@@ -1,8 +1,8 @@
-export default function App() {
+export  function App() {
 
   return (
     <>
-      <h1 className="bg-slate-950">Hello</h1>
+      <h1 className="bg-slate-950  text-green-700">Hello</h1>
     </>
   )
 }
