@@ -1,9 +1,8 @@
-export  function App() {
-  const ipcHandle = (): void => window.electron.ipcRenderer.send('ping')
+export default function App() {
 
   return (
     <>
-      <h1>Hello word</h1>
+      <h1 className="bg-slate-950">Hello</h1>
     </>
   )
 }
