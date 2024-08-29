@@ -2,7 +2,8 @@ import { app, shell, BrowserWindow } from 'electron'
 import path from 'node:path'
 import { createFileRoute, createURLRoute } from 'electron-router-dom'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
-
+import { createTray } from './tray'
+import { createShortcuts } from './shortcuts'
 function createWindow(): void {
   const mainWindow = new BrowserWindow({
     width: 1120,
@@ -26,8 +27,8 @@ function createWindow(): void {
     },
   })
 
-  // createTray(mainWindow)
-  // createShortcuts(mainWindow)
+  createTray(mainWindow)
+  createShortcuts(mainWindow)
 
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()

@@ -15,9 +15,7 @@ export function Document() {
         </ToC.Root>
       </aside>
 
-      <section className="">
-        <Editor content="das" onContentUpdated={} />
-      </section>
+      <section className=""></section>
     </main>
   )
 }
