@@ -16,7 +16,7 @@ export function Document() {
       </aside>
 
       <section className="">
-        <Editor content="das" />
+        <Editor content="das" onContentUpdated={} />
       </section>
     </main>
   )

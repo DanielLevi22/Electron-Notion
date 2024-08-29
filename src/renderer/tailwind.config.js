@@ -1,12 +1,13 @@
-const plugin = require('tailwindcss/plugin')
+import plugin from 'tailwindcss/plugin'
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: ['./src/**/*.tsx'],
   theme: {
     extend: {
       fontFamily: {
         sans: 'Inter, sans-serif',
       },
+
       colors: {
         rotion: {
           50: '#ebeaed',
@@ -21,10 +22,29 @@ module.exports = {
           900: '#17141f',
         },
       },
+
+      keyframes: {
+        slideIn: {
+          from: { width: 0 },
+          to: { width: 'var(--radix-collapsible-content-width)' },
+        },
+
+        slideOut: {
+          from: { width: 'var(--radix-collapsible-content-width)' },
+          to: { width: 0 },
+        },
+      },
+
+      animation: {
+        slideIn: 'slideIn 0.25s',
+        slideOut: 'slideOut 0.25s',
+      },
     },
   },
   plugins: [
     require('@tailwindcss/typography'),
+    require('tailwind-scrollbar'),
+
     plugin(({ addUtilities }) => {
       addUtilities({
         '.region-drag': {
